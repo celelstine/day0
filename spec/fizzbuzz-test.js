@@ -2,6 +2,18 @@
   'use strict';
   var  fizzBuzz = require('../lib/fizzBuzz.js');
 
+  describe("Fizz Buzz tests: wrong input", function() {
+  
+    it("should return `expecting a number` for '3'", function() {
+      expect(fizzBuzz('3')).toBe('expecting a number');
+    });
+
+    it("should return `expecting a number` for  'Fizz'", function() {
+      expect(fizzBuzz('Fizz')).toBe('expecting a number');
+    });
+
+  });
+
   describe("Fizz Buzz tests ", function() {
 
     it("should return `Fizz` for number divisible by 3", function() {

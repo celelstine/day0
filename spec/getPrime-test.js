@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  var getprimes = require('../app/library.js');
+  var getprimes = require('../lib/getPrimes.js');
 
   describe("Prime Numbers tests ", function() {
   describe("Case for wrong dataTypes", function() {
@@ -30,15 +30,15 @@
   describe("Case for Natural Numbers", function() {
 
     it("should return [] for 1", function() {
-      expect(getprimes(1)).toBe([]);
+      expect(getprimes(1)).toEqual([]);
     });
 
     it("should return [2,3,5] for 5", function() {
-      expect(getprimes(5)).toBe([2,3,5] );
+      expect(getprimes(5)).toEqual([2,3,5]);
     });
 
     it("should return [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97 ] for 100", function() {
-      expect(getprimes(100)).toBe([2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97 ]);
+      expect(getprimes(100)).toEqual([2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]);
     });
 
 

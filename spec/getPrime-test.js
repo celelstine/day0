@@ -33,8 +33,20 @@
       expect(getprimes(1)).toEqual([]);
     });
 
+    it("should return [2] for 2", function() {
+      expect(getprimes(2)).toEqual([2]);
+    });
+
     it("should return [2,3,5] for 5", function() {
       expect(getprimes(5)).toEqual([2,3,5]);
+    });
+
+    it("should return [2,3,5,7] for 10", function() {
+      expect(getprimes(10)).toEqual([2,3,5,7]);
+    });
+
+    it("should return [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ] for 50", function() {
+      expect(getprimes(50)).toEqual([ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ]);
     });
 
     it("should return [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97 ] for 100", function() {
